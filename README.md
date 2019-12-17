@@ -10,20 +10,36 @@ gem 'wesender'
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
     $ gem install wesender
 
-## Usage
+## Setup and Usage
+Make sure you setup the environment variables WESENDER_API_KEY:
+$ WESENDER_API_KEY='your_api_key' our options = {api_key: your_api_key}
 
-TODO: Write usage instructions here
+$ Wesender.sendSMS(numbers, message, hasSpecialCharacter)
 
+$ numbers: Array
+$ message: String
+$ hasSpecialCharacter: Boolean // opcional, by default is false
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/wesender. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+$ Eg: Wesender.sendSMS(["913000111"], "Hello Angola")
+## response
+$ {
+$ "Exito" : Boolean ,
+$ "Mensagem" : String,
+$ "Objeto" :
+$   {
+$     // quantity of message that you can send
+$     "SMS" : Number,
+$     "WhatsApp" : Number,
+$     "FacebookMesseger" : Number,
+$     "Integracoes" : Number,
+$   }
+$ }
 
 ## License
 [MIT License](https://opensource.org/licenses/MIT).
