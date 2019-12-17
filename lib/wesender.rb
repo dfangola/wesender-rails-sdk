@@ -4,10 +4,10 @@ require "httparty"
 module Wesender
   include HTTParty
 
-  base_uri "http://apiwesender.digitalfactory.co.ao"
+  base_uri "www.apiwesender.digitalfactory.co.ao"
   
   def initialize(api_key)
-    @api_key = api_key
+
   end
 
   def self.sendSMS(numbers, message, optins = {})
@@ -21,7 +21,7 @@ module Wesender
     }
     
     puts content
-    
+
     post("/envio/#{@api_key}", content)
   end
 
@@ -31,9 +31,3 @@ module Wesender
   #end
 
 end
-
-
-#ApiKey: ,
-#Destino: ,
-#Mensagem: ,
-#CEspecial: false
