@@ -4,30 +4,28 @@ require "httparty"
 module Wesender
   include HTTParty
 
-  base_uri "http://apiwesender-dev.digitalfactory.co.ao"
-  
-  def initialize(api_key)
+  def send(numbers, message, hasSpecialCharacter = false, options = {})
+    @url = 'http://apiwesender-dev.digitalfactory.co.ao'
 
+    response = HTTParty.post("#{@url}/envio/apikey", 
+      :body => { 
+        :ApiKey => @api_key, 
+        :Destino => numbers, 
+        :Mensagem => message, 
+        :CEspecial => hasSpecialCharacter 
+      }.to_json,
+      :headers => { 'Content-Type' => 'application/json' } 
+    )
+    response.parsed_response
   end
 
-  def self.sendSMS(numbers, message, optins = {})
-    content = {}
-    content[:headers] = {'Content-Type' => 'application/json'}
-    content[:body] = {
-      ApiKey: @api_key,
-      Destino: numbers,
-      Mensagem: message,
-      CEspecial: false
-    }
-    
-    puts content
+end
 
-    post("/envio/#{@api_key}", content)
+class WesenderSMS
+  include Wesender
+
+  def initialize( api_key = nil )
+    @api_key = api_key.nil? ? ENV["WESENDER_API_KEY"] : api_key
+    super()
   end
-
-
-  #def self.set_base_url(is_test = false)
-  #  self.base_uri is_test == true ? "http://apiwesender.digitalfactory.co.ao" : "https://app.wesender.co.ao"
-  #end
-
 end

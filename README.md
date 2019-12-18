@@ -19,20 +19,26 @@ Or install it yourself as:
 ## Setup and Usage
 Make sure you setup the environment variables WESENDER_API_KEY:
 
-```
-WESENDER_API_KEY='your_api_key' our options = {api_key: your_api_key}
+```ruby
+WESENDER_API_KEY='your_api_key' 
+our
+WesenderSMS.new(api_key)
 
-Wesender.sendSMS(numbers, message, hasSpecialCharacter)
+test = WesenderSMS.new
 
 numbers: Array
 message: String
 hasSpecialCharacter: Boolean // opcional, by default is false
+
+test.send(numbers, message, hasSpecialCharacter)
 ```
+
+```ruby
+Eg: test.send(["913000111"], "Hello Angola")
 ```
-Eg: Wesender.sendSMS(["913000111"], "Hello Angola")
-```
-## response
-```
+
+```json
+# response
 {
  "Exito" : Boolean ,
  "Mensagem" : String,
@@ -46,6 +52,7 @@ Eg: Wesender.sendSMS(["913000111"], "Hello Angola")
    }
 }
 ```
+
 ## License
 [MIT License](https://opensource.org/licenses/MIT).
 

@@ -1,18 +1,16 @@
 PATH
   remote: .
   specs:
-    wesender (0.0.2)
-      httparty
+    wesender (0.1.0)
+      httparty (~> 0.13.7)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    httparty (0.17.3)
-      mime-types (~> 3.0)
+    httparty (0.13.7)
+      json (~> 1.8)
       multi_xml (>= 0.5.2)
-    mime-types (3.3)
-      mime-types-data (~> 3.2015)
-    mime-types-data (3.2019.1009)
+    json (1.8.6)
     multi_xml (0.6.0)
     rake (10.5.0)
 
