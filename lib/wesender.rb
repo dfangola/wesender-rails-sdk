@@ -4,7 +4,7 @@ require "httparty"
 module Wesender
   include HTTParty
 
-  base_uri "apiwesender-dev.digitalfactory.co.ao"
+  base_uri "http://apiwesender-dev.digitalfactory.co.ao"
   
   def initialize(api_key)
 
