@@ -1,5 +1,4 @@
 # Wesender - RubyOnRails application integration library
-
 ## Installation
 
 Add this line to your application's Gemfile:
