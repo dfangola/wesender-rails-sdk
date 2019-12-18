@@ -36,7 +36,7 @@ test.send(numbers, message, hasSpecialCharacter)
 Eg: test.send(["913000111"], "Hello Angola")
 ```
 
-```json
+```js
 # response
 {
  "Exito" : Boolean ,
