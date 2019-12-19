@@ -1,0 +1,26 @@
+PATH
+  remote: .
+  specs:
+    wesender (0.0.1)
+      httparty (~> 0.13.7)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    httparty (0.13.7)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
+    json (1.8.6)
+    multi_xml (0.6.0)
+    rake (10.5.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 2.0)
+  rake (~> 10.0)
+  wesender!
+
+BUNDLED WITH
+   2.0.2

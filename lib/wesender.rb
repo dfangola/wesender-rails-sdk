@@ -5,7 +5,7 @@ module Wesender
   include HTTParty
 
   def send(numbers, message, hasSpecialCharacter = false, options = {})
-    @url = 'http://apiwesender-dev.digitalfactory.co.ao'
+    @url = 'https://api.wesender.co.ao'
 
     response = HTTParty.post("#{@url}/envio/apikey", 
       :body => { 
