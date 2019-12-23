@@ -1,6 +1,7 @@
 # Wesender - RubyOnRails application integration library
 ## Installation
 
+[Oficial doc](https://rubygems.org/gems/wesender).
 Add this line to your application's Gemfile:
 
 ```ruby

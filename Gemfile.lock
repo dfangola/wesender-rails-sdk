@@ -1,18 +1,26 @@
 PATH
   remote: .
   specs:
-    wesender (0.0.1)
-      httparty (~> 0.13.7)
+    wesender (0.0.10)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    httparty (0.13.7)
-      json (~> 1.8)
-      multi_xml (>= 0.5.2)
-    json (1.8.6)
-    multi_xml (0.6.0)
+    diff-lcs (1.3)
     rake (10.5.0)
+    rspec (3.9.0)
+      rspec-core (~> 3.9.0)
+      rspec-expectations (~> 3.9.0)
+      rspec-mocks (~> 3.9.0)
+    rspec-core (3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-expectations (3.9.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.0)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.9.0)
+    rspec-support (3.9.0)
 
 PLATFORMS
   ruby
@@ -20,6 +28,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   rake (~> 10.0)
+  rspec (~> 3.5)
   wesender!
 
 BUNDLED WITH

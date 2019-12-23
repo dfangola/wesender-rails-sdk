@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors                  = ["cabanga"]
   spec.email                    = ["manucabanga@gmail.com"]
 
-  spec.summary                  = %q{Write a short summary, because RubyGems requires one.}
-  spec.description              = %q{Write a longer description or delete this line.}
+  spec.summary                  = %q{Wesender}
+  spec.description              = %q{Wesender - RubyOnRails application integration library}
   spec.homepage                 = "https://github.com/Digital-Factory-Angola/wesender-rails-sdk"
   spec.license                  = "MIT"
   spec.metadata["homepage_uri"] = spec.homepage
@@ -26,4 +26,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_dependency 'httparty', '~> 0.13.7'
+  spec.add_development_dependency "rspec", "~> 3.5"
+
 end

@@ -18,12 +18,10 @@ module Wesender
     )
     response.parsed_response
   end
-
 end
 
 class WesenderSMS
   include Wesender
-
   def initialize( api_key = nil )
     @api_key = api_key.nil? ? ENV["WESENDER_API_KEY"] : api_key
     super()
