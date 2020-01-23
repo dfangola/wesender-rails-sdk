@@ -1,50 +1,51 @@
-# Wesender - RubyOnRails application integration library
-## Installation
+# WeSender SDK para Ruby on Rails
 
-[Oficial doc](https://rubygems.org/gems/wesender).
-Add this line to your application's Gemfile:
+SDK para conexão com a API em Ruby
+
+## Instalação 
+
+Execute o comando:
 
 ```ruby
 gem 'wesender'
 ```
 
-And then execute:
+Depois de executar o comando acima executa:
 
     $ bundle install
 
-Or install it yourself as:
+Ou instale usando o comando:
 
     $ gem install wesender
+    
+## Métodos diponiveis no momento
+### - sendMessage
 
-## Setup and Usage
-Make sure you setup the environment variables WESENDER_API_KEY:
+Certifique-se de configurar as variáveis de ambiente WESENDER_API_KEY:
 
 ```ruby
 WESENDER_API_KEY='your_api_key' 
-our
+ou
 WesenderSMS.new(api_key)
 
 test = WesenderSMS.new
 
 numbers: Array
 message: String
-hasSpecialCharacter: Boolean // opcional, by default is false
+hasSpecialCharacter: Boolean // opcional, por padrão é false
 
 test.send(numbers, message, hasSpecialCharacter)
 ```
 
-```ruby
-Eg: test.send(["913000111"], "Hello Angola")
-```
+Resposta do método é a mesma que a da API:
 
 ```js
-# response
 {
  "Exito" : Boolean ,
  "Mensagem" : String,
  "Objeto" :
    {
-     // quantity of message that you can send
+     // quantidade de mensagem que você pode enviar
      "SMS" : Number,
      "WhatsApp" : Number,
      "FacebookMesseger" : Number,
@@ -53,9 +54,28 @@ Eg: test.send(["913000111"], "Hello Angola")
 }
 ```
 
-## License
-[MIT License](https://opensource.org/licenses/MIT).
+## Exemplo
 
-## Author
+```ruby
+test.send(["913000111"], "Hello Angola")
+```
+## 🤔 Como contribuir
+
+- Faça um fork desse repositório;
+- Cria uma branch com a sua feature: `git checkout -b minha-feature`;
+- Faça commit das suas alterações: `git commit -m 'feat: Minha nova feature'`;
+- Faça push para a sua branch: `git push origin minha-feature`.
+
+Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+## Contribuidores
+
+[Carlos Garcia](https://github.com/CarlCr)
+
+## Autor
 
 [JM Cabanga](https://github.com/cabanga).
